@@ -1,0 +1,139 @@
+
+@charset "utf-8";
+
+/* Body Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  background-image: url(../pictures/earth.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Header Styles */
+
+header {
+  background-color: black;
+  color: darkblue;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Heading Styles */
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 24px;
+  text-shadow: 2px 2px 10px black;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 20px 0;
+  text-shadow: 2px 2px 10px black;
+}
+
+h3 {
+  font-size: 18px;
+  text-shadow: 2px 2px 10px black;
+}
+
+/* Main Content Styles */
+
+main {
+  max-width: 800px;
+  margin:  auto;
+  padding: 20px;
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: black;
+  font-style: italic;
+}
+
+/* List Styles */
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 15px;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+/* Footer Styles */
+
+footer {
+  padding: 5px;
+  background-color: black;
+  text-align: center;
+  color: darkblue;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Blockquote Styles */
+
+blockquote {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  letter-spacing: .01em;
+  line-height: 1.4em;
+  text-transform: none;
+  color: white;
+}
+/* grids for the goals  */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create three equal-width columns */
+  gap: 20px; /* Adjust the gap between grid items */
+}
+
+.grid-item {
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Align items horizontally in the center */
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: blue;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}

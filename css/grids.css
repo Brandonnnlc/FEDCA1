@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+article {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr); /* Creates three equal-width columns */
+    gap: 20px; /*  spacing between the columns */
+  }
+  
+  article {
+    border: 1px solid black; /* Sets a 1px solid black border */
+    padding: 15px; /* Adds padding inside the border */
+  }

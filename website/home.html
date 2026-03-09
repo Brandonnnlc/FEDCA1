@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Real World | Brandon Lim</title>
+    <link href="../css/style1.css" rel="stylesheet">
+    <style>
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../pictures/marina.JPG');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: clamp(4rem, 15vw, 12rem);
+            margin: 0;
+            text-align: center;
+            line-height: 0.8;
+            opacity: 0.9;
+        }
+
+        .hero-sub {
+            font-size: 1rem;
+            letter-spacing: 0.5em;
+            text-transform: uppercase;
+            margin-top: var(--spacing-md);
+            color: var(--accent-color);
+        }
+
+        .scroll-discovery {
+            position: absolute;
+            bottom: 120px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header>
+        <nav>
+            <a href="/website/home.html" class="active">Home</a>
+            <a href="/website/index.html">About</a>
+            <div class="logo"
+                style="margin: 0 var(--spacing-md); font-weight: 800; font-size: 1.2rem; letter-spacing: -0.05em; opacity: 1; pointer-events: none;">
+                BL</div>
+            <a href="/website/content.html">Goals</a>
+            <a href="/website/spwork.html">School</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="reveal-text">
+                <h1>THE REAL<br>WORLD</h1>
+            </div>
+            <div class="hero-sub reveal-text">Where humanity thrives</div>
+            <div class="scroll-discovery">Scroll to discover</div>
+        </section>
+
+        <section class="section-padding container"
+            style="text-align: center; min-height: 60vh; display: flex; align-items: center;">
+            <div class="reveal-text">
+                <h2 style="font-size: clamp(2rem, 5vw, 4rem); margin-bottom: var(--spacing-md);">A Collective<br><span
+                        class="serif">Effort for Survival</span></h2>
+                <p
+                    style="max-width: 600px; margin: 0 auto; color: var(--secondary-color); font-size: 1.1rem; line-height: 1.8;">
+                    The point of this is to inspire a change to make an effort in contributing to save planet Earth and
+                    make humanity great again.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 Brandon Lim &bull; Singapore Poly</p>
+    </footer>
+
+    <script>
+        document.addEventListener('mousemove', e => {
+            const dot = document.querySelector('.cursor-dot');
+            const outline = document.querySelector('.cursor-outline');
+            dot.style.left = e.clientX + 'px';
+            dot.style.top = e.clientY + 'px';
+            outline.style.left = e.clientX + 'px';
+            outline.style.top = e.clientY + 'px';
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal-text').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

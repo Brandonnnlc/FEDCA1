@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Brandon Lim</title>
+  <link href="../css/style1.css" rel="stylesheet">
+  <style>
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100vh;
+      align-items: center;
+      gap: var(--spacing-xl);
+    }
+
+    .img-mask {
+      width: 100%;
+      height: 80vh;
+      overflow: hidden;
+      border-radius: 4px;
+      filter: grayscale(100%);
+      transition: var(--transition);
+    }
+
+    .img-mask:hover {
+      filter: grayscale(0%);
+      transform: scale(0.98);
+    }
+
+    .img-mask img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-lg);
+    }
+
+    .stat-item h4 {
+      font-size: 0.7rem;
+      color: var(--accent-color);
+      margin-bottom: var(--spacing-xs);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <header>
+    <nav>
+      <a href="/website/home.html">Home</a>
+      <a href="/website/index.html" class="active">About</a>
+      <div class="logo"
+        style="margin: 0 var(--spacing-md); font-weight: 800; font-size: 1.2rem; letter-spacing: -0.05em; opacity: 1; pointer-events: none;">
+        BL</div>
+      <a href="/website/content.html">Goals</a>
+      <a href="/website/spwork.html">School</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="about-grid">
+      <div class="reveal-text">
+        <h4 style="color: var(--accent-color); margin-bottom: var(--spacing-sm); letter-spacing: 0.3em;">PROFILE</h4>
+        <h1 style="font-size: clamp(3rem, 8vw, 6rem);">Brandon<br><span class="serif">Lim</span></h1>
+        <p style="font-size: 1.2rem; margin-top: var(--spacing-md); color: var(--secondary-color); max-width: 500px;">
+          DIT Student at Singapore Polytechnic. Driven by a mission to advocate for planetary survival through
+          technology and awareness.
+        </p>
+        <div class="stat-grid">
+          <div class="stat-item">
+            <h4>SPECIALTY</h4>
+            <p>Environmental Tech</p>
+          </div>
+          <div class="stat-item">
+            <h4>LOCATION</h4>
+            <p>Singapore Poly</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-text" style="transition-delay: 0.2s;">
+        <div class="img-mask">
+          <img src="../pictures/john.jpg" alt="Brandon Lim">
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding" style="border-top: 1px solid var(--glass-border);">
+      <div class="about-grid">
+        <div class="reveal-text">
+          <h2 class="serif" style="font-size: 3rem;">Philosophy</h2>
+        </div>
+        <div class="reveal-text">
+          <p style="font-size: 1.1rem; line-height: 1.8; color: var(--secondary-color);">
+            I embody <strong>grit</strong> and <strong>empathy</strong>. Grit for the resilience needed to tackle
+            climate issues, and empathy to understand the human cost of environmental neglect. My outgoing nature drives
+            me to connect and inspire others for a collective future.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>2026 Brandon Lim &bull; Singapore Poly</p>
+  </footer>
+
+  <script>
+    document.addEventListener('mousemove', e => {
+      const dot = document.querySelector('.cursor-dot');
+      const outline = document.querySelector('.cursor-outline');
+      dot.style.left = e.clientX + 'px';
+      dot.style.top = e.clientY + 'px';
+      outline.style.left = e.clientX + 'px';
+      outline.style.top = e.clientY + 'px';
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal-text').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+
+</html>

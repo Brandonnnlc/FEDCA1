@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School | Singapore Poly</title>
+  <link href="../css/style1.css" rel="stylesheet">
+  <style>
+    /* School Hero */
+    .school-hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: flex-end;
+      padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg);
+      background: linear-gradient(to bottom, #050505, #050505);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .school-hero h1 {
+      font-size: clamp(3.5rem, 10vw, 8rem);
+    }
+
+    /* Case Study Panels */
+    .case-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 85vh;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      overflow: hidden;
+    }
+
+    .case-panel:nth-child(even) .case-img-col {
+      order: 2;
+    }
+
+    .case-panel:nth-child(even) .case-txt-col {
+      order: 1;
+    }
+
+    .case-img-col {
+      overflow: hidden;
+      background: #0a0a0a;
+    }
+
+    .case-img-col img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: grayscale(30%);
+      transition: transform 0.8s ease, filter 0.6s ease;
+    }
+
+    .case-panel:hover .case-img-col img {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+    }
+
+    .case-txt-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: var(--spacing-xl) var(--spacing-lg);
+      background: var(--bg-color);
+    }
+
+    .case-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.4em;
+      color: var(--accent-color);
+      display: block;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .case-number {
+      font-size: 6rem;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.04);
+      line-height: 1;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .case-txt-col h2 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .case-txt-col p {
+      color: var(--secondary-color);
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 480px;
+    }
+
+    @media (max-width: 900px) {
+      .case-panel {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .case-img-col {
+        height: 50vw;
+        min-height: 280px;
+      }
+
+      .case-panel:nth-child(even) .case-img-col {
+        order: 0;
+      }
+
+      .case-panel:nth-child(even) .case-txt-col {
+        order: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <header>
+    <nav>
+      <a href="/website/home.html">Home</a>
+      <a href="/website/index.html">About</a>
+      <div
+        style="margin: 0 var(--spacing-md); font-weight: 800; font-size: 1.2rem; letter-spacing: -0.05em; pointer-events: none;">
+        BL</div>
+      <a href="/website/content.html">Goals</a>
+      <a href="/website/spwork.html" class="active">School</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="school-hero reveal-text">
+      <div>
+        <span
+          style="font-size: 0.7rem; letter-spacing: 0.4em; color: var(--accent-color); display: block; margin-bottom: var(--spacing-sm);">STEWARDSHIP</span>
+        <h1>Singapore<br><span class="serif">Polytechnic</span></h1>
+        <p
+          style="margin-top: var(--spacing-md); color: var(--secondary-color); max-width: 600px; font-size: 1.1rem; line-height: 1.8;">
+          At the forefront of the green economy — a living laboratory for sustainability, where we prototype solutions
+          aligned with the SG Green Plan.</p>
+      </div>
+    </section>
+
+    <!-- Panel 01: CCC -->
+    <div class="case-panel reveal-text">
+      <div class="case-img-col">
+        <img src="../pictures/ccc_header-copy.png" alt="Common Core Curriculum">
+      </div>
+      <div class="case-txt-col">
+        <div class="case-number">01</div>
+        <span class="case-tag">ACADEMICS</span>
+        <h2>Common Core<br><span class="serif">Curriculum</span></h2>
+        <p>Learning experiences framed with the SG Green Plan and UNSDG's. We learn to prototype sustainable solutions
+          for real-life issues. The curriculum prepares us to lead in the green economy.</p>
+      </div>
+    </div>
+
+    <!-- Panel 02: Flora -->
+    <div class="case-panel reveal-text">
+      <div class="case-img-col">
+        <img src="../pictures/green-leaf-logo-vector.jpg" alt="Campus Biodiversity">
+      </div>
+      <div class="case-txt-col">
+        <div class="case-number">02</div>
+        <span class="case-tag">BIODIVERSITY</span>
+        <h2>Campus<br><span class="serif">Ecosystem</span></h2>
+        <p>SP is home to 230 different plant species. This biodiversity contributes to a healthy ecosystem on campus,
+          providing cleaner air and a vibrant natural environment for students to thrive in daily.</p>
+      </div>
+    </div>
+
+    <!-- Panel 03: Sports Arena -->
+    <div class="case-panel reveal-text">
+      <div class="case-img-col">
+        <img src="../pictures/sparena.jpg" alt="SP Sports Arena">
+      </div>
+      <div class="case-txt-col">
+        <div class="case-number">03</div>
+        <span class="case-tag">INFRASTRUCTURE</span>
+        <h2>Platinum<br><span class="serif">Buildings</span></h2>
+        <p>Our commitment is etched in our foundations. Buildings like the SP Sports Arena have been certified Green
+          Mark Platinum — the gold standard in sustainable architecture and responsible building design.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer style="margin-bottom: 6rem;">
+    <p>2026 Brandon Lim &bull; Singapore Poly</p>
+  </footer>
+
+  <script>
+    document.addEventListener('mousemove', e => {
+      document.querySelector('.cursor-dot').style.cssText = `left:${e.clientX}px;top:${e.clientY}px`;
+      document.querySelector('.cursor-outline').style.cssText = `left:${e.clientX}px;top:${e.clientY}px`;
+    });
+    const observer = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.08 });
+    document.querySelectorAll('.reveal-text').forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>

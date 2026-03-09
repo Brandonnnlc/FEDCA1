@@ -1,0 +1,141 @@
+/* Set background color for the entire page */
+html {
+  background-color: green;
+}
+
+/* Styles= navigation menu */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: black;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/*  banner logo style */
+.banner-logo {
+  display: block;
+  width: 100%;
+  max-height: 200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border: 2px solid #333;
+  box-sizing: border-box;
+}
+
+/* Grid container styles */
+.grid-container {
+  background-color: #333;
+  display: block;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Grid item styles */
+.grid-item {
+  border-style: outset;
+  border-width: 5px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+/* Additional box styling for grid items */
+.grid-item {
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  box-sizing: border-box;
+}
+
+/* Margin and alignment for grid items */
+.grid-item {
+  margin-bottom: 20px;
+}
+
+/* Heading styles */
+h1,
+h2,
+h3 {
+  color: #333;
+}
+
+/* Paragraph text styles */
+p {
+  color: #666;
+}
+
+/* Spacing between grid items */
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Center-align grid items */
+.grid-item {
+  text-align: center;
+}
+
+/* Add box shadow to grid items */
+.grid-item {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Change word color on hover */
+.grid-item:hover {
+  color: blue;
+}
+
+/* Styles for text box */
+.text-box {
+  margin: 15px;
+  padding: 15px;
+  background-color: white;
+  border: 2px solid black;
+  text-align: center;
+}
+
+/* Styles for blockquote */
+blockquote {
+  margin: 2px;
+  padding: 2px;
+  font-style: italic;
+}
+
+/* Styles for images */
+img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+}
+
+/* Styles for figcaption */
+figcaption {
+  text-align: center;
+}

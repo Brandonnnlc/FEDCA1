@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+main{
+color: whitesmoke;  
+}
+body {
+  background-image: url(../pictures/marina.JPG);
+  min-height: 1000px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Align items horizontally in the center */
+}
+  
+nav li {
+  margin-right: 10px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+.text-box{
+  width: 90%;
+  color: ghostwhite;
+  position: absolute;
+  text-align: center;
+  
+}
+.text-box h1{
+  font-size: 50px;
+}
